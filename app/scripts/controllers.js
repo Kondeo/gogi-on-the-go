@@ -69,4 +69,23 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('SummaryCtrl', function($scope, $stateParams) {
+  $scope.toolSummaries = [
+    { summary: [
+
+    ], id: 1 },
+    { summary: [
+
+    ], id: 2 }
+  ];
+  $scope.tool = getByID($scope.contentItems, parseInt($stateParams.toolId));
+    function getByID(arr, id){
+      for (var d = 0, len = arr.length; d < len; d += 1) {
+        if (arr[d].id === id){
+          return arr[d];
+        }
+      }
+    }
 });

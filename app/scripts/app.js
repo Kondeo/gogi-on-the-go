@@ -56,7 +56,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
+    .state('app.summary', {
+      url: "/summary/:summaryId",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/summary.html",
+          controller: 'SummaryCtrl'
+        }
+      }
+    })
   .state('app.single', {
     url: "/playlists/:playlistId",
     views: {
