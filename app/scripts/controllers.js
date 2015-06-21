@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $location) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -63,18 +63,22 @@ angular.module('starter.controllers', [])
             if(currentWeek % numTools == 1)
             {
                 //Boss of my brain
+                $location.path("app/tool/" + 1);
             }
             else if(currentWeek % numTools == 2)
             {
                 //Belly Breathing
+                $location.path("app/tool/" + 2);
             }
             else if(currentWeek % numTools == 3)
             {
                 //Five Second Lightswitch
+                $location.path("app/tool/" + 3);
             }
             else if(currentWeek % numTools == 4)
             {
                 //Postive thoughts
+                $location.path("app/tool/" + 4);
             }
             else if(currentWeek % numTools == 5)
             {
@@ -88,31 +92,38 @@ angular.module('starter.controllers', [])
                 else
                 {
                     //Else, Positive Words
+                    $location.path("app/tool/" + 5);
                 }
             }
             else if(currentWeek % numTools == 6)
             {
                 //Positive Actions
+                $location.path("app/tool/" + 6);
             }
             else if(currentWeek % numTools == 7)
             {
                 //Claim Responsibility
+                $location.path("app/tool/" + 7);
             }
             else if(currentWeek % numTools == 8)
             {
                 //Let Go
+                $location.path("app/tool/" + 8);
             }
             else if(currentWeek % numTools == 9)
             {
                 //For--Give
+                $location.path("app/tool/" + 9);
             }
             else if(currentWeek % numTools == 10)
             {
                 //What IF
+                $location.path("app/tool/" + 10);
             }
             else if(currentWeek % numTools == 11)
             {
                 //Reality Check
+                $location.path("app/tool/" + 11);
             }
             //Else it is the 12th week zero
             else
@@ -127,6 +138,7 @@ angular.module('starter.controllers', [])
                 else
                 {
                     //Else, Ultimate Freedom
+                    $location.path("app/tool/" + 12);
                 }
             }
         }
