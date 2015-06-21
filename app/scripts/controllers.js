@@ -14,18 +14,18 @@ angular.module('starter.controllers', [])
 
   // Listing an array of sidebar items
   $scope.contentItems = [
-    { title: 'Boss Of My Brain', id: 1 },
-    { title: 'Belly Breathing', id: 2 },
-    { title: 'Five Second Lightswitch', id: 3 },
-    { title: 'Positive Thoughts', id: 4 },
-    { title: 'Positive Words', id: 5 },
-    { title: 'Positive Actions', id: 6 },
-    { title: 'Claim Responsibility', id: 7 },
-    { title: 'Let Go', id: 8 },
-    { title: 'Forgive', id: 9 },
-    { title: 'What If', id: 10 },
-    { title: 'Reality Check', id: 11 },
-    { title: 'Ultimate Freedom', id: 12 }
+    { title: 'Boss Of My Brain', id: 1, content: "Placeholder content" },
+    { title: 'Belly Breathing', id: 2, content: "Placeholder content" },
+    { title: 'Five Second Lightswitch', id: 3, content: "Placeholder content" },
+    { title: 'Positive Thoughts', id: 4, content: "Placeholder content" },
+    { title: 'Positive Words', id: 5, content: "Placeholder content" },
+    { title: 'Positive Actions', id: 6, content: "Placeholder content" },
+    { title: 'Claim Responsibility', id: 7, content: "Placeholder content" },
+    { title: 'Let Go', id: 8, content: "Placeholder content" },
+    { title: 'Forgive', id: 9, content: "Placeholder content" },
+    { title: 'What If', id: 10, content: "Placeholder content" },
+    { title: 'Reality Check', id: 11, content: "Placeholder content" },
+    { title: 'Ultimate Freedom', id: 12, content: "Placeholder content" }
   ];
 
   // Create the login modal that we will use later
