@@ -72,4 +72,13 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ToolCtrl', function($scope, $stateParams) {
+  $scope.tool = getByID($scope.contentItems, parseInt($stateParams.toolId));
+
+  function getByID(arr, id){
+    for (var d = 0, len = arr.length; d < len; d += 1) {
+      if (arr[d].id === id){
+        return arr[d];
+      }
+    }
+  }
 });
