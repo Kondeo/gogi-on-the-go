@@ -14,18 +14,54 @@ angular.module('starter.controllers', [])
 
   // Listing an array of sidebar items
   $scope.contentItems = [
-    { title: 'Boss Of My Brain', id: 1, content: "Placeholder content" },
-    { title: 'Belly Breathing', id: 2, content: "Placeholder content" },
-    { title: 'Five Second Lightswitch', id: 3, content: "Placeholder content" },
-    { title: 'Positive Thoughts', id: 4, content: "Placeholder content" },
-    { title: 'Positive Words', id: 5, content: "Placeholder content" },
-    { title: 'Positive Actions', id: 6, content: "Placeholder content" },
-    { title: 'Claim Responsibility', id: 7, content: "Placeholder content" },
-    { title: 'Let Go', id: 8, content: "Placeholder content" },
-    { title: 'Forgive', id: 9, content: "Placeholder content" },
-    { title: 'What If', id: 10, content: "Placeholder content" },
-    { title: 'Reality Check', id: 11, content: "Placeholder content" },
-    { title: 'Ultimate Freedom', id: 12, content: "Placeholder content" }
+    {
+      title: 'Boss Of My Brain',
+      id: 1,
+      content: "Smart Part, Emotional Part, Old Habit Part. Which one is in charge?" },
+    {
+      title: 'Belly Breathing',
+      id: 2,
+      content: "Hand on stomach, Hand on chest. Which one is moving?" },
+    {
+      title: 'Five Second Lightswitch',
+      id: 3,
+      content: "Old thought? I have a new action. By the count of five, I get to my new action" },
+    {
+      title: 'Positive Thoughts',
+      id: 4,
+      content: "Is it Powerful? Productive? Positive" },
+    {
+      title: 'Positive Words',
+      id: 5,
+      content: "Is it Powerful? Productive? Positive" },
+    {
+      title: 'Positive Actions',
+      id: 6,
+      content: "Is it Powerful? Productive? Positive" },
+    {
+      title: 'Claim Responsibility',
+      id: 7,
+      content: "I own today. I ask myself, \"Am I proud of this Choice?\"" },
+    {
+      title: 'Let Go',
+      id: 8,
+      content: "hand / squash / toss" },
+    {
+      title: 'For-give',
+      id: 9,
+      content: "For me to give I must be safe from harm." },
+    {
+      title: 'What If',
+      id: 10,
+      content: "What if I am not my past?" },
+    {
+      title: 'Reality Check',
+      id: 11,
+      content: "Ten steps forward and two steps back is still eight steps ahead." },
+    {
+      title: 'Ultimate Freedom',
+      id: 12,
+      content: "Being free is up to me." }
   ];
 
   // Create the login modal that we will use later
