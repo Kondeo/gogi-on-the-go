@@ -13,19 +13,55 @@ angular.module('starter.controllers', [])
   $scope.loginData = {};
 
   // Listing an array of sidebar items
-  $scope.menuItems = [
-    { title: 'Boss Of My Brain', id: 1 },
-    { title: 'Belly Breathing', id: 2 },
-    { title: 'Five Second Lightswitch', id: 3 },
-    { title: 'Positive Thoughts', id: 4 },
-    { title: 'Positive Words', id: 5 },
-    { title: 'Positive Actions', id: 6 },
-    { title: 'Claim Responsibility', id: 7 },
-    { title: 'Let Go', id: 8 },
-    { title: 'Forgive', id: 9 },
-    { title: 'What If', id: 10 },
-    { title: 'Reality Check', id: 11 },
-    { title: 'Ultimate Freedom', id: 12 }
+  $scope.contentItems = [
+    {
+      title: 'Boss Of My Brain',
+      id: 1,
+      content: "Smart Part, Emotional Part, Old Habit Part. Which one is in charge?" },
+    {
+      title: 'Belly Breathing',
+      id: 2,
+      content: "Hand on stomach, Hand on chest. Which one is moving?" },
+    {
+      title: 'Five Second Lightswitch',
+      id: 3,
+      content: "Old thought? I have a new action. By the count of five, I get to my new action" },
+    {
+      title: 'Positive Thoughts',
+      id: 4,
+      content: "Is it Powerful? Productive? Positive" },
+    {
+      title: 'Positive Words',
+      id: 5,
+      content: "Is it Powerful? Productive? Positive" },
+    {
+      title: 'Positive Actions',
+      id: 6,
+      content: "Is it Powerful? Productive? Positive" },
+    {
+      title: 'Claim Responsibility',
+      id: 7,
+      content: "I own today. I ask myself, \"Am I proud of this Choice?\"" },
+    {
+      title: 'Let Go',
+      id: 8,
+      content: "hand / squash / toss" },
+    {
+      title: 'For-give',
+      id: 9,
+      content: "For me to give I must be safe from harm." },
+    {
+      title: 'What If',
+      id: 10,
+      content: "What if I am not my past?" },
+    {
+      title: 'Reality Check',
+      id: 11,
+      content: "Ten steps forward and two steps back is still eight steps ahead." },
+    {
+      title: 'Ultimate Freedom',
+      id: 12,
+      content: "Being free is up to me." }
   ];
 
   // Create the login modal that we will use later
@@ -69,4 +105,16 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('ToolCtrl', function($scope, $stateParams) {
+  $scope.tool = getByID($scope.contentItems, parseInt($stateParams.toolId));
+
+  function getByID(arr, id){
+    for (var d = 0, len = arr.length; d < len; d += 1) {
+      if (arr[d].id === id){
+        return arr[d];
+      }
+    }
+  }
 });

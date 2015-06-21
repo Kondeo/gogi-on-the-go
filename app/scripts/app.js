@@ -56,6 +56,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.tool', {
+      url: "/tool/:toolId",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/tool.html",
+          controller: 'ToolCtrl'
+        }
+      }
+    })
 
   .state('app.single', {
     url: "/playlists/:playlistId",
