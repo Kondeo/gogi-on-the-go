@@ -1,16 +1,32 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-  
+
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-  
+
   // Form data for the login modal
   $scope.loginData = {};
+
+  // Listing an array of sidebar items
+  $scope.menuItems = [
+    { title: 'Boss Of My Brain', id: 1 },
+    { title: 'Belly Breathing', id: 2 },
+    { title: 'Five Second Lightswitch', id: 3 },
+    { title: 'Positive Thoughts', id: 4 },
+    { title: 'Positive Words', id: 5 },
+    { title: 'Positive Actions', id: 6 },
+    { title: 'Claim Responsibility', id: 7 },
+    { title: 'Let Go', id: 8 },
+    { title: 'Forgive', id: 9 },
+    { title: 'What If', id: 10 },
+    { title: 'Reality Check', id: 11 },
+    { title: 'Ultimate Freedom', id: 12 }
+  ];
 
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
