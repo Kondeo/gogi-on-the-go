@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
   $scope.loginData = {};
 
   // Listing an array of sidebar items
-  $scope.menuItems = [
+  $scope.contentItems = [
     { title: 'Boss Of My Brain', id: 1 },
     { title: 'Belly Breathing', id: 2 },
     { title: 'Five Second Lightswitch', id: 3 },
