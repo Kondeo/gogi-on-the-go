@@ -88,6 +88,7 @@ angular.module('starter.controllers', [])
                 startofWeek.month()  == 3 || startofWeek.month() == 9)
                 {
                     //If it is, then review
+                    $location.path("app/summary/" + 1);
                 }
                 else
                 {
@@ -134,6 +135,7 @@ angular.module('starter.controllers', [])
                 startofWeek.month()  == 8 || startofWeek.month() == 11)
                 {
                     //If it is, then review
+                    $location.path("app/summary/" + 2);
                 }
                 else
                 {
