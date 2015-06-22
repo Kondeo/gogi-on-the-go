@@ -45,8 +45,6 @@ angular.module('starter.controllers', [])
   //Check what the featured page should be
     $scope.getFeatured = function ()
     {
-        //Get the number of iso weeks for the year, 52 is leap year, 53 is normal year
-        var weeksInYear = moment().isoWeeksInYear();
         //Get the current week
         var currentWeek = moment().isoWeek();
         //Get Starting date of this week
@@ -58,96 +56,89 @@ angular.module('starter.controllers', [])
 
         //If it is a normal year
         //organize the weeks with modulo of gogi tools
-        if(weeksInYear > 52)
+        if(currentWeek % numTools == 1)
         {
-            if(currentWeek % numTools == 1)
+            //Boss of my brain
+            $location.path("app/tool/" + 1);
+        }
+        else if(currentWeek % numTools == 2)
+        {
+            //Belly Breathing
+            $location.path("app/tool/" + 2);
+        }
+        else if(currentWeek % numTools == 3)
+        {
+            //Five Second Lightswitch
+            $location.path("app/tool/" + 3);
+        }
+        else if(currentWeek % numTools == 4)
+        {
+            //Postive thoughts
+            $location.path("app/tool/" + 4);
+        }
+        else if(currentWeek % numTools == 5)
+        {
+            //We need to check if the week is a 5th week of the month
+            //We check if the start of this weeks month is january, April, July or October
+            if(startofWeek.month()  == 0 || startofWeek.month() == 3
+            startofWeek.month()  == 6 || startofWeek.month() == 9)
             {
-                //Boss of my brain
-                $location.path("app/tool/" + 1);
+                //If it is, then review
+                $location.path("app/summary/" + 1);
             }
-            else if(currentWeek % numTools == 2)
-            {
-                //Belly Breathing
-                $location.path("app/tool/" + 2);
-            }
-            else if(currentWeek % numTools == 3)
-            {
-                //Five Second Lightswitch
-                $location.path("app/tool/" + 3);
-            }
-            else if(currentWeek % numTools == 4)
-            {
-                //Postive thoughts
-                $location.path("app/tool/" + 4);
-            }
-            else if(currentWeek % numTools == 5)
-            {
-                //We need to check if the week is a 5th week of the month
-                //We check if the start of this weeks month is january, July, April or October
-                if(startofWeek.month()  == 0 || startofWeek.month() == 6
-                startofWeek.month()  == 3 || startofWeek.month() == 9)
-                {
-                    //If it is, then review
-                    $location.path("app/summary/" + 1);
-                }
-                else
-                {
-                    //Else, Positive Words
-                    $location.path("app/tool/" + 5);
-                }
-            }
-            else if(currentWeek % numTools == 6)
-            {
-                //Positive Actions
-                $location.path("app/tool/" + 6);
-            }
-            else if(currentWeek % numTools == 7)
-            {
-                //Claim Responsibility
-                $location.path("app/tool/" + 7);
-            }
-            else if(currentWeek % numTools == 8)
-            {
-                //Let Go
-                $location.path("app/tool/" + 8);
-            }
-            else if(currentWeek % numTools == 9)
-            {
-                //For--Give
-                $location.path("app/tool/" + 9);
-            }
-            else if(currentWeek % numTools == 10)
-            {
-                //What IF
-                $location.path("app/tool/" + 10);
-            }
-            else if(currentWeek % numTools == 11)
-            {
-                //Reality Check
-                $location.path("app/tool/" + 11);
-            }
-            //Else it is the 12th week zero
             else
             {
-                //We need to check if the week is a 5th week of a month
-                //We check if the start of this weeks month is March, September, June, or December
-                if(startofWeek.month()  == 2 || startofWeek.month() == 5
-                startofWeek.month()  == 8 || startofWeek.month() == 11)
-                {
-                    //If it is, then review
-                    $location.path("app/summary/" + 2);
-                }
-                else
-                {
-                    //Else, Ultimate Freedom
-                    $location.path("app/tool/" + 12);
-                }
+                //Else, Positive Words
+                $location.path("app/tool/" + 5);
             }
         }
-        //If it is a leap year
+        else if(currentWeek % numTools == 6)
+        {
+            //Positive Actions
+            $location.path("app/tool/" + 6);
+        }
+        else if(currentWeek % numTools == 7)
+        {
+            //Claim Responsibility
+            $location.path("app/tool/" + 7);
+        }
+        else if(currentWeek % numTools == 8)
+        {
+            //Let Go
+            $location.path("app/tool/" + 8);
+        }
+        else if(currentWeek % numTools == 9)
+        {
+            //For--Give
+            $location.path("app/tool/" + 9);
+        }
+        else if(currentWeek % numTools == 10)
+        {
+            //What IF
+            $location.path("app/tool/" + 10);
+        }
+        else if(currentWeek % numTools == 11)
+        {
+            //Reality Check
+            $location.path("app/tool/" + 11);
+        }
+        //Else it is the 12th week zero
         else
         {
-
+            //We need to check if the week is a 5th week of a month
+            //We check if the start of this weeks month is March, June, September or December
+            if(startofWeek.month()  == 2 || startofWeek.month() == 5
+            startofWeek.month()  == 8 || startofWeek.month() == 11)
+            {
+                //If it is, then review
+                $location.path("app/summary/" + 2);
+            }
+            else
+            {
+                //Else, Ultimate Freedom
+                $location.path("app/tool/" + 12);
+            }
+        }
         }
 
     };
