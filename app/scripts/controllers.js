@@ -68,7 +68,7 @@ angular.module('starter.controllers', [])
         var monthTool = 1;
 
         //Loop through and simulate the tools for the year
-        for(int i = 1; i < moment().isoWeek() + 1; ++i)
+        for(var i = 1; i < moment().isoWeek() + 1; ++i)
         {
             //Get the week
             var week = moment().isoWeek(i);
@@ -91,7 +91,7 @@ angular.module('starter.controllers', [])
                       else
                       {
                           //it is review 2
-                          $location.path("app/summary/" + 1); 
+                          $location.path("app/summary/" + 1);
                       }
                 }
                 else
