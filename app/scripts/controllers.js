@@ -39,112 +39,9 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
-
-
-  // at the bottom of your controller
-  //Check what the featured page should be
-    $scope.getFeatured = function ()
-    {
-        //Get the current week
-        var currentWeek = moment().isoWeek();
-        //Get Starting date of this week
-        var startOfWeek = moment().startOf('isoWeek');
-        //Get our pervious month
-        //Number of GOGI Tools
-        var numTools = 12;
-
-
-        //If it is a normal year
-        //organize the weeks with modulo of gogi tools
-        if(currentWeek % numTools == 1)
-        {
-            //Boss of my brain
-            $location.path("app/tool/" + 1);
-        }
-        else if(currentWeek % numTools == 2)
-        {
-            //Belly Breathing
-            $location.path("app/tool/" + 2);
-        }
-        else if(currentWeek % numTools == 3)
-        {
-            //Five Second Lightswitch
-            $location.path("app/tool/" + 3);
-        }
-        else if(currentWeek % numTools == 4)
-        {
-            //Postive thoughts
-            $location.path("app/tool/" + 4);
-        }
-        else if(currentWeek % numTools == 5)
-        {
-            //We need to check if the week is a 5th week of the month
-            //We check if the start of this weeks month is january, April, July or October
-            if(startofWeek.month()  == 0 || startofWeek.month() == 3
-            startofWeek.month()  == 6 || startofWeek.month() == 9)
-            {
-                //If it is, then review
-                $location.path("app/summary/" + 1);
-            }
-            else
-            {
-                //Else, Positive Words
-                $location.path("app/tool/" + 5);
-            }
-        }
-        else if(currentWeek % numTools == 6)
-        {
-            //Positive Actions
-            $location.path("app/tool/" + 6);
-        }
-        else if(currentWeek % numTools == 7)
-        {
-            //Claim Responsibility
-            $location.path("app/tool/" + 7);
-        }
-        else if(currentWeek % numTools == 8)
-        {
-            //Let Go
-            $location.path("app/tool/" + 8);
-        }
-        else if(currentWeek % numTools == 9)
-        {
-            //For--Give
-            $location.path("app/tool/" + 9);
-        }
-        else if(currentWeek % numTools == 10)
-        {
-            //What IF
-            $location.path("app/tool/" + 10);
-        }
-        else if(currentWeek % numTools == 11)
-        {
-            //Reality Check
-            $location.path("app/tool/" + 11);
-        }
-        //Else it is the 12th week zero
-        else
-        {
-            //We need to check if the week is a 5th week of a month
-            //We check if the start of this weeks month is March, June, September or December
-            if(startofWeek.month()  == 2 || startofWeek.month() == 5
-            startofWeek.month()  == 8 || startofWeek.month() == 11)
-            {
-                //If it is, then review
-                $location.path("app/summary/" + 2);
-            }
-            else
-            {
-                //Else, Ultimate Freedom
-                $location.path("app/tool/" + 12);
-            }
-        }
-        }
-
-    };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope, $location) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -153,6 +50,116 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
+
+    //Check what the featured page should be
+    $scope.getFeatured = function ()
+    {
+      //$location.path("app/summary/" + 1);
+      //$location.path("app/tool/" + 5);
+        //Get the current week
+        var currentWeek = moment().isoWeek();
+        //Get Starting date of this week
+        var startOfWeek = moment().startOf('isoWeek');
+        //Get our pervious month
+        //The Gogi Tool we are currently testing
+        var currentTool = 1;
+
+        //The current gogi tool of the month
+        var monthTool = 1;
+
+        //Loop through and simulate the tools for the year
+        for(int i = 1; i < moment().isoWeek() + 1; ++i)
+        {
+            //Get the week
+            var week = moment().isoWeek(i);
+
+            //check if it is our current week
+            if(week == currentWeek)
+            {
+                //Check if it is a review week
+                if(montTool == 5)
+                {
+                        //figure out if we should go to review one or two
+                        //We check if the start of this weeks month is january, April, July or October
+                      if(startofWeek.month()  == 0 || startofWeek.month() == 3 ||
+                      startofWeek.month()  == 6 || startofWeek.month() == 9)
+                      {
+                          //then it is review one
+                          $location.path("app/summary/" + 1);
+                      }
+                      //else this weeks month is March, June, September or December
+                      else
+                      {
+                          //it is review 2
+                          $location.path("app/summary/" + 1); 
+                      }
+                }
+                else
+                {
+                    //go to our tool page
+                    $location.path("app/tool/" + currentTool);
+                }
+                //And break
+                break;
+            }
+
+            //Check if the monthly tool is 4
+            if(monthTool == 4)
+            {
+                //Check next week and see if it is a review week
+                //if next week's starting date's month, is the same as this week's startin day month
+                if(moment().isoWeek(i + 1).startOf('isoWeek').month() == week.startOf('isoWeek').month())
+                {
+                    //this is a 5th review month
+                    //increase month tool but not current tool
+                    ++monthTool;
+                }
+                //It is a new month with a new set of tools
+                else
+                {
+                    if(currentTool >= 12)
+                    {
+                        currentTool = 0;
+                    }
+                    else
+                    {
+                        ++currentTool;
+                    }
+                    monthTool = 0;
+                }
+            }
+            //Also need to check if it is a review week
+            else if(monthTool == 5)
+            {
+                //reset month tool, and now increase current tool
+                if(currentTool >= 12)
+                {
+                    currentTool = 0;
+                }
+                else
+                {
+                    ++currentTool;
+                }
+                monthTool = 0;
+            }
+            //If it is not greater than 3 or 4 then just continue like usual
+            else
+            {
+                if(currentTool >= 12)
+                {
+                    currentTool = 0;
+                }
+                else
+                {
+                    ++currentTool;
+                }
+                ++monthTool;
+            }
+        }
+    };
+
+    $scope.getFeatured();
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
