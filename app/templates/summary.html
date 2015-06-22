@@ -1,0 +1,10 @@
+<ion-view view-title="Summary">
+<ion-content>
+<h1>This Month's Tool Summary</h1>
+<ion-list>
+  <ion-item ng-repeat = "tool in summary" href = "#/app/tool/{{tool.urlId}}">
+    <div>{{tool.title}}</div>
+  </ion-item>
+</ion-list>
+</ion-content>
+</ion-view>

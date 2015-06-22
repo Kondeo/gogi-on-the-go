@@ -117,4 +117,29 @@ angular.module('starter.controllers', [])
       }
     }
   }
+})
+
+.controller('SummaryCtrl', function($scope, $stateParams) {
+  $scope.toolSummaries = [
+    { summary: [
+        { title: 'BOSS OF MY BRAIN', id: 1, urlId: 1 },
+        { title: 'BELLY BREATHING', id: 2, urlId: 2 },
+        { title: 'FIVE SECOND LIGHTSWITCH', id: 3, urlId: 3 },
+        { title: 'POSITIVE THOUGHTS', id: 4, urlId: 4 }
+      ], id: 1 },
+    { summary: [
+        { title: 'FOR--GIVE', id: 1, urlId: 9 },
+        { title: 'WHAT IF', id: 2, urlId: 10 },
+        { title: 'REALITY CHECK', id: 3, urlId: 11 },
+        { title: 'ULTIMATE FREEDOM', id: 4, urlId: 12 }
+    ], id: 2 }
+  ];
+  $scope.summary = getByID($scope.toolSummaries, parseInt($stateParams.summaryId));
+    function getByID(arr, id){
+      for (var d = 0, len = arr.length; d < len; d += 1) {
+        if (arr[d].id === id){
+          return arr[d].summary;
+        }
+      }
+    }
 });
