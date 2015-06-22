@@ -54,8 +54,6 @@ angular.module('starter.controllers', [])
     //Check what the featured page should be
     $scope.getFeatured = function ()
     {
-      //$location.path("app/summary/" + 1);
-      //$location.path("app/tool/" + 5);
         //Get the current week
         var currentWeek = moment().isoWeek();
         //Get Starting date of this week
@@ -74,10 +72,12 @@ angular.module('starter.controllers', [])
             var week = moment().isoWeek(i);
 
             //check if it is our current week
-            if(week == currentWeek)
+            if(i == currentWeek)
             {
+                //Alert where we are for testing
+                alert(currentTool + ", " + monthTool + ", " + i);
                 //Check if it is a review week
-                if(montTool == 5)
+                if(monthTool == 5)
                 {
                         //figure out if we should go to review one or two
                         //We check if the start of this weeks month is january, April, July or October
@@ -119,13 +119,13 @@ angular.module('starter.controllers', [])
                 {
                     if(currentTool >= 12)
                     {
-                        currentTool = 0;
+                        currentTool = 1;
                     }
                     else
                     {
                         ++currentTool;
                     }
-                    monthTool = 0;
+                    monthTool = 1;
                 }
             }
             //Also need to check if it is a review week
@@ -134,20 +134,20 @@ angular.module('starter.controllers', [])
                 //reset month tool, and now increase current tool
                 if(currentTool >= 12)
                 {
-                    currentTool = 0;
+                    currentTool = 1;
                 }
                 else
                 {
                     ++currentTool;
                 }
-                monthTool = 0;
+                monthTool = 1;
             }
             //If it is not greater than 3 or 4 then just continue like usual
             else
             {
                 if(currentTool >= 12)
                 {
-                    currentTool = 0;
+                    currentTool = 1;
                 }
                 else
                 {
@@ -159,7 +159,6 @@ angular.module('starter.controllers', [])
     };
 
     $scope.getFeatured();
-
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
