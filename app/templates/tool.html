@@ -1,9 +1,9 @@
-<ion-view view-title="Tool Details">
+<ion-view view-title="{{pageTitleText}}">
     <ion-content>
         <div class="list card">
             <div class="item item-avatar toolAvatar">
                 <h2>{{tool.title}}</h2>
-                <p></p>
+                <p>{{titleSubText}}</p>
             </div>
             <div class="item item-body">
                 <div ng-bind-html="tool.content">d</div>

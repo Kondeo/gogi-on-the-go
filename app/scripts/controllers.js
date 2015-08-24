@@ -147,7 +147,7 @@ angular.module('starter.controllers', [])
                 else
                 {
                     //go to our tool page
-                    $location.path("app/tool/" + currentTool);
+                    $location.path("app/tool/" + currentTool).search({featured: 'true'});
                 }
                 //And break
                 break;
@@ -214,8 +214,16 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('ToolCtrl', function($scope, $stateParams) {
+.controller('ToolCtrl', function($scope, $stateParams, $location, $ionicHistory) {
   $scope.tool = getByID($scope.contentItems, parseInt($stateParams.toolId));
+
+  $scope.pageTitleText = "Tool Details"
+  $scope.titleSubText = "a gogi tool.";
+  if($location.search().featured){
+      $ionicHistory.clearHistory();
+      $scope.pageTitleText = "Featured Tool"
+      $scope.titleSubText = "featured tool this month."
+  }
 
   function getByID(arr, id){
     for (var d = 0, len = arr.length; d < len; d += 1) {
