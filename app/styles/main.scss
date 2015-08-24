@@ -1,1 +1,30 @@
 // Your application styles go here
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.bar.bar-standard {
+    background-color: #009f2d;
+    border-color: #009f2d;
+    color: white;
+}
+
+.button-clear.button-clear {
+    color: white;
+}
+
+.toolAvatar{
+    padding-left: 16px !important;
+}
+
+.textContainer {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.textContainer.small {
+    margin-top: 20px;
+    font-size: 13px;
+}
