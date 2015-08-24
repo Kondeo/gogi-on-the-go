@@ -126,8 +126,6 @@ angular.module('starter.controllers', [])
             //check if it is our current week
             if(i == currentWeek)
             {
-                //Alert where we are for testing
-                alert(currentTool + ", " + monthTool + ", " + i);
                 //Check if it is a review week
                 if(monthTool == 5)
                 {
