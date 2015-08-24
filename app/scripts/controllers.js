@@ -17,53 +17,43 @@ angular.module('starter.controllers', [])
     {
       title: 'Boss Of My Brain',
       id: 1,
-      content: "Smart Part, Emotional Part, Old Habit Part. Which one is in charge?" + return
-        + "I am BOSS OF MY BRAIN and I have complete control over each thought I create. Because I am BOSS OF MY BRAIN, I can change my thoughts at any time.  No one has control over my thoughts because only I am the BOSS OF MY BRAIN."},
+      content: "Smart Part, Emotional Part, Old Habit Part. Which one is in charge?<br />I am BOSS OF MY BRAIN and I have complete control over each thought I create. Because I am BOSS OF MY BRAIN, I can change my thoughts at any time.  No one has control over my thoughts because only I am the BOSS OF MY BRAIN."},
     {
       title: 'Belly Breathing',
       id: 2,
-      content: "Hand on stomach, Hand on chest. Which one is moving?" + return
-        + "With BELLY BREATHING I can instantly relax my body and I can make positive decisions. When I am BELLY BREATHING I take control of my thoughts and feelings"},
+      content: "Hand on stomach, Hand on chest. Which one is moving?<br />With BELLY BREATHING I can instantly relax my body and I can make positive decisions. When I am BELLY BREATHING I take control of my thoughts and feelings"},
     {
       title: 'Five Second Lightswitch',
       id: 3,
-      content: "Old thought? I have a new action. By the count of five, I get to my new action" + return
-        + "I can flip my FIVE SECOND LIGHTSWITCH and instantly change any negative thought to a positive action. There is no negative thought more powerful than my positive action when I flip my FIVE SECOND LIGHTSWITCH"},
+      content: "Old thought? I have a new action. By the count of five, I get to my new action<br />I can flip my FIVE SECOND LIGHTSWITCH and instantly change any negative thought to a positive action. There is no negative thought more powerful than my positive action when I flip my FIVE SECOND LIGHTSWITCH"},
     {
       title: 'Positive Thoughts',
       id: 4,
-      content: "Is it Powerful? Productive? Positive" + return
-        + "My POSITIVE THOUGHTS set the direction of my life from this moment forward. I focus on POSITIVE THOUGHTS, even when it is difficult or challenging, No matter what is happening, I can create POSITIVE THOUGHTS."},
+      content: "Is it Powerful? Productive? Positive<br />My POSITIVE THOUGHTS set the direction of my life from this moment forward. I focus on POSITIVE THOUGHTS, even when it is difficult or challenging, No matter what is happening, I can create POSITIVE THOUGHTS."},
     {
       title: 'Positive Words',
       id: 5,
-      content: "Is it Powerful? Productive? Positive" + return
-        + "My POSITIVE Words tell the world what I am thinking and who I am today. I use POSITIVE Words to break free from my past and move forward into a positive future."},
+      content: "Is it Powerful? Productive? Positive<br />My POSITIVE Words tell the world what I am thinking and who I am today. I use POSITIVE Words to break free from my past and move forward into a positive future."},
     {
       title: 'Positive Actions',
       id: 6,
-      content: "Is it Powerful? Productive? Positive" + return
-        + "I know I have the power to transform my world through my POSITIVE ACTIONS. I choose my POSITIVE ACTIONS so I can move beyond my past and create my positive future."},
+      content: "Is it Powerful? Productive? Positive<br />I know I have the power to transform my world through my POSITIVE ACTIONS. I choose my POSITIVE ACTIONS so I can move beyond my past and create my positive future."},
     {
       title: 'Claim Responsibility',
       id: 7,
-      content: "I own today. I ask myself, \"Am I proud of this Choice?\"" + return
-        + "From this moment forward, I CLAIM RESPONSIBILITY for all my actions and all my reactions. All my actions and my reactions today are my responsibility and I CLAIM RESPONSIBILITY."},
+      content: "I own today. I ask myself, \"Am I proud of this Choice?\"<br />From this moment forward, I CLAIM RESPONSIBILITY for all my actions and all my reactions. All my actions and my reactions today are my responsibility and I CLAIM RESPONSIBILITY."},
     {
-      : 'Let Go',
+      title: 'Let Go',
       id: 8,
-      content: "hand / squash / toss" + return
-        + "The best way to focus on living in the present and moving forward it if I LET GO of anything which has held me back. When I LET GO, I move forward and I am setting myself free."},
+      content: "hand / squash / toss<br />The best way to focus on living in the present and moving forward it if I LET GO of anything which has held me back. When I LET GO, I move forward and I am setting myself free."},
     {
       title: 'For-give',
       id: 9,
-      content: "For me to give I must be safe from harm." + return
-        + "FOR me to GIVE back to others I make sure I am safe from harm. FOR me to GIVE, I make sure I am safe."},
+      content: "For me to give I must be safe from harm.<br />FOR me to GIVE back to others I make sure I am safe from harm. FOR me to GIVE, I make sure I am safe."},
     {
       title: 'What If',
       id: 10,
-      content: "What if I am not my past?" + return
-        + "WHAT IF permits me to see possibilities I might not otherwise realize. Today, I ask myself, WHAT IF I am not my past? WHAT IF I reached my goal? WHAT IF I actually improved my life today, tomorrow and the next day?"},
+      content: "What if I am not my past?<br />WHAT IF permits me to see possibilities I might not otherwise realize. Today, I ask myself, WHAT IF I am not my past? WHAT IF I reached my goal? WHAT IF I actually improved my life today, tomorrow and the next day?"},
     {
       title: 'Reality Check',
       id: 11,
@@ -71,8 +61,7 @@ angular.module('starter.controllers', [])
     {
       title: 'Ultimate Freedom',
       id: 12,
-      content: "Being free is up to me." + return
-        + "I know I am oing to make mistakes along the way, but REALITY CHECK lets me quickly correct my mistakes. Today, I agree to get right back on track with REALITY CHECK when I do somethig that is not perfect."}
+      content: "Being free is up to me.<br />I know I am oing to make mistakes along the way, but REALITY CHECK lets me quickly correct my mistakes. Today, I agree to get right back on track with REALITY CHECK when I do somethig that is not perfect."}
   ];
 
   // Create the login modal that we will use later
