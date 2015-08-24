@@ -1,1 +1,16 @@
 // Your application styles go here
+.toolAvatar{
+    padding-left: 16px !important;
+}
+
+.textContainer {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.textContainer.small {
+    margin-top: 20px;
+    font-size: 13px;
+}

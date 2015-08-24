@@ -1,6 +1,17 @@
 <ion-view view-title="Tool">
-  <ion-content>
-    <h1>{{tool.title}}</h1>
-    <div ng-bind-html="tool.content"></div>
-  </ion-content>
+    <ion-content>
+        <div class="list card">
+            <div class="item item-avatar toolAvatar">
+                <h2>{{tool.title}}</h2>
+                <p></p>
+            </div>
+            <div class="item item-body">
+                <div ng-bind-html="tool.content">d</div>
+            </div>
+        </div>
+
+        <div class="textContainer small">
+          Open side menu to view other tools.
+      </div>
+    </ion-content>
 </ion-view>
