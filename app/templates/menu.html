@@ -18,7 +18,7 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item ng-repeat="contentItem in contentItems" href="#/app/tool/{{contentItem.id}}">
+        <ion-item menu-close ng-repeat="contentItem in contentItems" href="#/app/tool/{{contentItem.id}}">
           {{contentItem.title}}
         </ion-item>
       </ion-list>
